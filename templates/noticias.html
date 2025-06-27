@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Noticias B2bFlow</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #c4170c;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        a {
+            text-decoration: none;
+            color: #1a0dab;
+        }
+    </style>
+</head>
+<body>
+     <h1>📰 Últimas Notícias do G1</h1>
+    <ul>
+        {% for noticia in noticias %}
+            <li><a href="{{ noticia.link }}" target="_blank">{{ noticia.titulo }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
